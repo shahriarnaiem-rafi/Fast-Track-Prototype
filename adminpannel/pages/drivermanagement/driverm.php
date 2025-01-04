@@ -6,7 +6,7 @@ if (isset($_POST["add-driver"])) {
     $dphone = $_POST['driver_phone'];
     $dstatus = $_POST['driver_status'];
     $sql = $database->query("INSERT INTO driver_management(driver_name,driver_phone,available) VALUES('$dname','$dphone','$dstatus')");
-    if($sql) {
+    if ($sql) {
         header("location: index.php");
     }
 }
@@ -155,7 +155,7 @@ if (isset($_POST["add-driver"])) {
     }
     echo "</table>";
     ?>
-    <h3>Assign Task</h3>
+    <!-- <h3 style="text-align:center; margin-top:5px; " class="text-2xl bg-[lightblue]">Assign Task</h3>
     <form action="" method="post">
         <div class="form-group">
             <label for="task-order-id">Order ID</label>
@@ -164,12 +164,16 @@ if (isset($_POST["add-driver"])) {
         <div class="form-group">
             <label for="assign-driver">Select Driver</label>
             <select id="assign-driver" name="assign_driver">
-                <option value="driver_1">John Doe</option>
-                <option value="driver_2">Jane Smith</option>
+                <?php
+                $ns = $database->query("select * from driver_management");
+                while (list($id, $dname, $dphone) = $ns->fetch_row()) {
+                    echo "<option value='$id'>$dname</option>";
+                }
+                ?>
             </select>
         </div>
         <div class="form-actions">
             <button type="submit">Assign Task</button>
         </div>
-    </form>
+    </form> -->
 </div>

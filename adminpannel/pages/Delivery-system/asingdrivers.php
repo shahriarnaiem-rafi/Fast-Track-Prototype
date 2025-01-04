@@ -63,19 +63,22 @@
         <div class="form-group">
             <label for="driver">Assign Driver</label>
             <select id="driver" name="driver">
-                <option value="driver_1">John Doe</option>
-                <option value="driver_2">Jane Smith</option>
-                <option value="driver_3">Michael Brown</option>
+            <?php
+                $ns = $database->query("select * from driver_management");
+                while (list($id, $dname, $dphone) = $ns->fetch_row()) {
+                    echo "<option value='$id'>$dname</option>";
+                }
+                ?>
             </select>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="vehicle">Assign Vehicle</label>
             <select id="vehicle" name="vehicle">
                 <option value="vehicle_1">Truck 101</option>
                 <option value="vehicle_2">Van 202</option>
                 <option value="vehicle_3">Bike 303</option>
             </select>
-        </div>
+        </div> -->
         <div class="form-actions">
             <button type="submit">Assign</button>
         </div>
