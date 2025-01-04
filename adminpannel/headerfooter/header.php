@@ -1,20 +1,19 @@
 <?php
+ob_start();
 session_start();
-  $database=mysqli_connect("localhost","root","","fasttrack");
-  $userId = $_SESSION['user-id'];
+$database=mysqli_connect("localhost","root","","fasttrack");
+$userId = $_SESSION['user-id'];
 $sql = "SELECT * FROM registration WHERE id = ?";
 $stmt = $database->prepare($sql);
 $stmt->bind_param("i", $userId);
 $stmt->execute();
 $result = $stmt->get_result();
-
 if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();
 } else {
     echo "User not found.";
     exit;
 }
-
 ?>
 <!doctype html>
 <html lang="en">

@@ -1,8 +1,15 @@
-<?php 
-    $database = mysqli_connect("localhost", "root", "", "fasttrack");
-    if(isset($_POST["add-driver"])){
-        
+<?php
+ob_start();
+$database = mysqli_connect("localhost", "root", "", "fasttrack");
+if (isset($_POST["add-driver"])) {
+    $dname = $_POST['driver_name'];
+    $dphone = $_POST['driver_phone'];
+    $dstatus = $_POST['driver_status'];
+    $sql = $database->query("INSERT INTO driver_management(driver_name,driver_phone,available) VALUES('$dname','$dphone','$dstatus')");
+    if($sql) {
+        header("location: index.php");
     }
+}
 ?>
 <style>
     body {
@@ -100,11 +107,9 @@
         color: #dc3545;
     }
 </style>
-
 <div class="drivers-container">
     <h2>Drivers Management</h2>
-    <!-- Add Driver Form -->
-    <form action="#" method="post">
+    <form action="" method="post">
         <div class="form-group">
             <label for="driver-name">Driver Name</label>
             <input type="text" id="driver-name" name="driver_name" placeholder="Enter driver name">
@@ -124,9 +129,9 @@
             <button type="submit" name="add-driver">Add Driver</button>
         </div>
     </form>
-
-    <!-- Drivers List -->
-    <h3>Drivers List</h3>
+    <?php
+    $db = $database->query("select * from driver_management");
+    echo "<h3>Drivers List</h3>
     <table>
         <thead>
             <tr>
@@ -136,28 +141,22 @@
                 <th>Status</th>
                 <th>Completed Deliveries</th>
             </tr>
-        </thead>
-        <tbody>
+        </thead>";
+    while (list($id, $dname, $dphone, $dstatus) = $db->fetch_row()) {
+        echo "<tbody>
             <tr>
-                <td>DRV001</td>
-                <td>John Doe</td>
-                <td>+1 234 567 890</td>
-                <td><span class="status">Available</span></td>
+                <td>$id</td>
+                <td>$dname </td>
+                <td>$dphone</td>
+                <td><span class='status'>$dstatus</span></td>
                 <td>120</td>
             </tr>
-            <tr>
-                <td>DRV002</td>
-                <td>Jane Smith</td>
-                <td>+1 987 654 321</td>
-                <td><span class="status unavailable">Unavailable</span></td>
-                <td>95</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Assign Task -->
+            </tbody>";
+    }
+    echo "</table>";
+    ?>
     <h3>Assign Task</h3>
-    <form action="#" method="post">
+    <form action="" method="post">
         <div class="form-group">
             <label for="task-order-id">Order ID</label>
             <input type="text" id="task-order-id" name="order_id" placeholder="Enter Order ID">
