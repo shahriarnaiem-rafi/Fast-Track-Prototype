@@ -200,7 +200,7 @@ Manage notification settings (email/SMS alerts for delivery updates). -->
         <li class="nav-header">EXAMPLES</li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon bi bi-box-arrow-in-right"></i>
+          <i class="fa-solid fa-user"></i>
             <p>
               Auth
               <i class="nav-arrow bi bi-chevron-right"></i>
