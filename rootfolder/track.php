@@ -22,6 +22,7 @@ header("location:");
 
             color: white;
         }
+
         .my-btn:hover {
 
             background-color: black;
@@ -38,7 +39,6 @@ header("location:");
                     Service (Pvt.) Ltd.</a>
             </div>
             <div class="flex-none">
-
 
                 <button class="btn btn-primary w-24 text-xl my-btn" style="margin-right: 100px;"> <a href="home.php" id="home-login"> Home</a></button>
 

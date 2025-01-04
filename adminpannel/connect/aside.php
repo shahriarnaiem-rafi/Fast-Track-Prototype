@@ -74,7 +74,7 @@
             <li class="nav-item">
               <a href="#" class="nav-link" id="delivery-order-list-btn">
                 <i class="nav-icon bi bi-circle"></i>
-                <p>Order list</p>
+                <p>Order Details</p>
                 <!-- Order list : Order List: A table with columns like order ID, customer name, pickup location, delivery location, status, etc.-->
               </a>
             </li>

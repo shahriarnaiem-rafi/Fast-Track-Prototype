@@ -1,3 +1,9 @@
+<?php 
+    $database = mysqli_connect("localhost", "root", "", "fasttrack");
+    if(isset($_POST["add-driver"])){
+        
+    }
+?>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -115,7 +121,7 @@
             </select>
         </div>
         <div class="form-actions">
-            <button type="submit">Add Driver</button>
+            <button type="submit" name="add-driver">Add Driver</button>
         </div>
     </form>
 

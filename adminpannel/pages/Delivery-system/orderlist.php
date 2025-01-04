@@ -1,3 +1,6 @@
+<?php
+$database = mysqli_connect("localhost", "root", "", "fasttrack");
+?>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -65,41 +68,46 @@
         background-color: #f8d7da;
     }
 </style>
-
-<div class="table-container">
-    <p>Order List</p>
-    <table>
+<?php
+$ns = $database->query("select * from  user_section");
+echo "<div class='table-container'> 
+<p>Order List</p>  
+<table>
         <thead>
             <tr>
                 <th>Order ID</th>
-                <th>Customer Name</th>
-                <th>Pickup Location</th>
+                <th>D Type</th>
+                <th>sender Name</th>
+                 <th>Pickup Location</th>
+                <th>sender phone </th>
+                <th>receiver Name</th>
                 <th>Delivery Location</th>
+                <th>receiver phone</th>
+                <th>Product</th>
+               
+                
                 <th>Status</th>
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>ORD001</td>
-                <td>John Doe</td>
-                <td>New York, NY</td>
-                <td>Los Angeles, CA</td>
-                <td><span class="status pending">Pending</span></td>
-            </tr>
-            <tr>
-                <td>ORD002</td>
-                <td>Jane Smith</td>
-                <td>Chicago, IL</td>
-                <td>Houston, TX</td>
-                <td><span class="status completed">Completed</span></td>
-            </tr>
-            <tr>
-                <td>ORD003</td>
-                <td>Michael Brown</td>
-                <td>Seattle, WA</td>
-                <td>Denver, CO</td>
-                <td><span class="status cancelled">Cancelled</span></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+        </thead>";
+while (list($id,$service_type, $sender_name, $sender_address, $sender_phone, $receiver_name, $receiver_address, $receiver_phone, $product) = $ns->fetch_row()) {
+    echo " <tbody>
+        <tr>
+            <td>$id</td>
+            <td>$service_type</td>
+            <td>$sender_name</td>
+            <td>$sender_address</td>
+            <td>$sender_phone</td>
+            <td>$receiver_name</td>
+            <td>$receiver_address</td>
+            <td>$receiver_phone</td>
+            <td> $product</td>
+            <td><span class='status pending'>Pending</span></td>
+        </tr>
+       
+    </tbody>";
+}
+echo " </table> </div>";
+
+
+
+?>
