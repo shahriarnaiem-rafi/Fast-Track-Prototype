@@ -136,7 +136,7 @@ Assign tasks to drivers. -->
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link " id="payment-btn">
+              <a href="#" class="nav-link" id="payment-btn">
                 <i class="fa-solid fa-money-bill"></i>
                 <p>Payments</p>
                 <!-- View payment history from customers.
@@ -147,6 +147,27 @@ Display profit/loss analytics. -->
             </li>
           </ul>
         </li>
+
+        
+        <!-- branch -->
+        <li class="nav-item">
+          <a href="#" class="nav-link dashboard-show">
+            <i class="fa-solid fa-code-branch"></i>
+            <p>
+              Branch Management
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link" id="branch-btn">
+                <i class="fa-solid fa-code-branch"></i>
+                <p>Create Branch</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
 
 
 
@@ -174,7 +195,7 @@ Respond to queries directly from the admin panel. -->
 
         <li class="nav-item">
           <a href="#" class="nav-link dashboard-show">
-          <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-gear"></i>
             <p>
               Settings
               <i class="nav-arrow bi bi-chevron-right"></i>
@@ -183,7 +204,7 @@ Respond to queries directly from the admin panel. -->
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="#" class="nav-link " id="setting-btn">
-              <i class="fa-solid fa-gear"></i>
+                <i class="fa-solid fa-gear"></i>
                 <p>Settings</p>
                 <!-- Change admin profile details.
 Configure service zones (areas your courier service covers).
@@ -200,7 +221,7 @@ Manage notification settings (email/SMS alerts for delivery updates). -->
         <li class="nav-header">EXAMPLES</li>
         <li class="nav-item">
           <a href="#" class="nav-link">
-          <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-user"></i>
             <p>
               Auth
               <i class="nav-arrow bi bi-chevron-right"></i>
@@ -234,7 +255,7 @@ Manage notification settings (email/SMS alerts for delivery updates). -->
           </ul>
         </li>
 
-        <li class="nav-item" >
+        <li class="nav-item">
           <a href="" class="nav-link" id="browser-btn">
             <i class="nav-icon bi bi-browser-edge"></i>
             <p>Browser Support</p>

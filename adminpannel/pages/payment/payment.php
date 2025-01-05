@@ -114,6 +114,7 @@
         <thead>
             <tr>
                 <th>Payment ID</th>
+                <th>Order ID</th>
                 <th>Customer Name</th>
                 <th>Amount</th>
                 <th>Payment Method</th>
@@ -123,6 +124,7 @@
         <tbody>
             <tr>
                 <td>PMT001</td>
+                <td>OID001</td>
                 <td>John Doe</td>
                 <td>$100</td>
                 <td>Credit Card</td>
@@ -130,6 +132,8 @@
             </tr>
             <tr>
                 <td>PMT002</td>
+                <td>OID001</td>
+
                 <td>Jane Smith</td>
                 <td>$50</td>
                 <td>PayPal</td>

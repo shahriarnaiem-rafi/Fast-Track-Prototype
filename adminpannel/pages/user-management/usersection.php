@@ -16,7 +16,6 @@ if (isset($_POST["submitted"])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -193,7 +192,18 @@ if (isset($_POST["submitted"])) {
                 <input type="text" id="senderName" name="senderName" required>
 
                 <label for="senderAddress">Address</label>
-                <input type="text" id="senderAddress" name="senderAddress" required>
+
+                <select name="senderAddress" id="senderAddress">
+                    <?php
+                    $ns = $database->query("select * from branch");
+                    while (list($id, $branch_name, $branch_code) = $ns->fetch_row()) {
+                        echo "<option value=''>Select Address</option>";
+                        echo "<option value='$id'>$branch_name</option>";
+                    }
+                    ?>
+
+
+                </select>
 
                 <label for="senderPhone">Phone</label>
                 <input type="tel" id="senderPhone" name="senderPhone" required>
@@ -204,7 +214,15 @@ if (isset($_POST["submitted"])) {
                 <input type="text" id="receiverName" name="receiverName" required>
 
                 <label for="receiverAddress">Address</label>
-                <input type="text" id="receiverAddress" name="receiverAddress" required>
+                <select name="receiverAddress" id="receiverAddress">
+                <?php
+                    $ns = $database->query("select * from branch");
+                    while (list($id, $branch_name, $branch_code) = $ns->fetch_row()) {
+                        echo "<option value=''>Select Address</option>";
+                        echo "<option value='$id'>$branch_name</option>";
+                    }
+                    ?>
+                </select>
 
                 <label for="receiverPhone">Phone</label>
                 <input type="tel" id="receiverPhone" name="receiverPhone" required>

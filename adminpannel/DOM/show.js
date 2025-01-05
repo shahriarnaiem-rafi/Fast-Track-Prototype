@@ -18,6 +18,7 @@ document.getElementById('dashboard-btn').addEventListener("click", function (eve
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 
 
@@ -45,6 +46,7 @@ document.getElementById('user-btn').addEventListener("click", function (event) {
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 
 })
@@ -101,6 +103,7 @@ document.getElementById('delivery-order-list-btn').addEventListener("click", fun
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 
 
@@ -127,6 +130,7 @@ document.getElementById('delivery-status-btn').addEventListener("click", functio
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 
 
@@ -154,6 +158,7 @@ document.getElementById('delivery-assing-btn').addEventListener("click", functio
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 
 
@@ -181,7 +186,7 @@ document.getElementById('delivery-track-btn').addEventListener("click", function
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
-
+    document.getElementById('branch-id').classList.add('hidden');
 
 
 
@@ -208,6 +213,7 @@ document.getElementById('driver-btn').addEventListener("click", function (event)
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 
 })
@@ -235,6 +241,7 @@ document.getElementById('payment-btn').addEventListener("click", function (event
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 })
 //support section
 
@@ -258,6 +265,7 @@ document.getElementById('support-btn').addEventListener("click", function (event
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 
 })
@@ -284,6 +292,7 @@ document.getElementById('setting-btn').addEventListener("click", function (event
 
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 })
 //aurth-login-btn
@@ -307,6 +316,7 @@ document.getElementById('aurth-login-btn').addEventListener("click", function (e
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 })
 // aurth registry
 document.getElementById('aurth-registry-btn').addEventListener("click", function (event) {
@@ -327,6 +337,7 @@ document.getElementById('aurth-registry-btn').addEventListener("click", function
     document.getElementById('browser-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 })
 //browser 
 document.getElementById('browser-btn').addEventListener("click", function (event) {
@@ -348,6 +359,7 @@ document.getElementById('browser-btn').addEventListener("click", function (event
     //document.getElementById('customer-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 })
 //faq
@@ -370,6 +382,7 @@ document.getElementById('faq-btn').addEventListener("click", function (event) {
     document.getElementById('user-id').classList.add('hidden');
     //document.getElementById('customer-id').classList.add('hidden');
     document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 })
 //licence
 document.getElementById('licence-btn').addEventListener("click", function (event) {
@@ -391,5 +404,30 @@ document.getElementById('licence-btn').addEventListener("click", function (event
     document.getElementById('user-id').classList.add('hidden');
    // document.getElementById('customer-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
+    document.getElementById('branch-id').classList.add('hidden');
 
 })
+//branch
+
+  document.getElementById('branch-btn').addEventListener("click", function (event) {
+    event.preventDefault();
+
+    document.getElementById('branch-id').classList.remove('hidden');
+    document.getElementById('licence-id').classList.add('hidden');
+    document.getElementById('browser-id').classList.add('hidden');
+    document.getElementById('aurth-registry-id').classList.add('hidden');
+    document.getElementById('aurth-login-id').classList.add('hidden');
+    document.getElementById('setting-id').classList.add('hidden');
+    document.getElementById('support-id').classList.add('hidden');
+    document.getElementById('payment-id').classList.add('hidden');
+    document.getElementById('driver-id').classList.add('hidden');
+    document.getElementById('delivery-track-id').classList.add('hidden');
+    document.getElementById('delivery-assing-id').classList.add('hidden');
+    document.getElementById('delivery-status-id').classList.add('hidden');
+    document.getElementById('delivery-orderlist-id').classList.add('hidden');
+    document.getElementById('dashboard-section').classList.add('hidden');
+    document.getElementById('user-id').classList.add('hidden');
+    // document.getElementById('customer-id').classList.add('hidden');
+    document.getElementById('faq-id').classList.add('hidden');
+  });
+

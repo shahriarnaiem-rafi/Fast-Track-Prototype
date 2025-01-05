@@ -175,6 +175,15 @@ include_once "../connect/aside.php";
         include_once "./payment/payment.php";
         ?>
       </div>
+
+      <!-- Branch -->
+      <div id="branch-id" class="hidden">
+        <?php
+        include_once "./branch/branch.php";
+        ?>
+      </div>
+
+
       <!-- suport -->
       <div id="support-id" class="hidden">
         <?php
