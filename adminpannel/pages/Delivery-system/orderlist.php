@@ -69,7 +69,7 @@ $database = mysqli_connect("localhost", "root", "", "fasttrack");
     }
 </style>
 <?php
-$ns = $database->query("select * from  user_section");
+$ns = $database->query("select * from  customer_section");
 echo "<div class='table-container'> 
 <p>Order List</p>  
 <table>

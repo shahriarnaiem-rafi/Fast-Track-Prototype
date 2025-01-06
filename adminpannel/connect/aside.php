@@ -38,8 +38,8 @@
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="fa-solid fa-people-roof"></i>
-            <p>
-              User Management
+            <p class="text-[15px]">
+              Customer Management
               <i class="nav-arrow bi bi-chevron-right"></i>
             </p>
           </a>
@@ -47,7 +47,7 @@
             <li class="nav-item" disabled>
               <a href="#" class="nav-link" id="user-btn">
                 <i class="nav-icon bi bi-circle"></i>
-                <p>User Section</p>
+                <p>Customer Section</p>
               </a>
             </li>
             <!-- <li class="nav-item">

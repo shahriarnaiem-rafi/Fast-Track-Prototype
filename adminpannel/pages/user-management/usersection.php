@@ -12,14 +12,8 @@ if (isset($_POST["submitted"])) {
     $sql = $database->query("INSERT INTO user_section(service_type,sender_name,sender_address,sender_phone,receiver_name,receiver_address,receiver_phone,product) VALUES('$service_type','$sender_name','$sender_address','$sender_phone','$receiver_name','$receiver_address','$receiver_phone','$product')");
     header("location:index.php");
 }
-
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receipt Form</title>
+
     <style>
         /* General Styling */
 
@@ -234,6 +228,3 @@ if (isset($_POST["submitted"])) {
             </form>
         </div>
     </div>
-</body>
-
-</html>
