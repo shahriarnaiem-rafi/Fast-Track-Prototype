@@ -256,21 +256,8 @@ Manage notification settings (email/SMS alerts for delivery updates). -->
         </li>
 
         <li class="nav-item">
-          <a href="" class="nav-link" id="browser-btn">
-            <i class="nav-icon bi bi-browser-edge"></i>
-            <p>Browser Support</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="" class="nav-link" id="faq-btn">
-            <i class="nav-icon bi bi-question-circle-fill"></i>
-            <p>FAQ</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link" id="licence-btn">
-            <i class="nav-icon bi bi-patch-check-fill"></i>
+          <a href="../../rootfolder/logout.php" class="nav-link">
+          <i class="fa-solid fa-right-to-bracket"></i>
             <p>License</p>
           </a>
         </li>
