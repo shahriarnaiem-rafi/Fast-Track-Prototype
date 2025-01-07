@@ -9,7 +9,7 @@ if (isset($_POST["submitted"])) {
     $receiver_address = $_POST['receiverAddress'];
     $receiver_phone = $_POST['receiverPhone'];
     $product = $_POST['receiverProduct'];
-    $sql = $database->query("INSERT INTO user_section(service_type,sender_name,sender_address,sender_phone,receiver_name,receiver_address,receiver_phone,product) VALUES('$service_type','$sender_name','$sender_address','$sender_phone','$receiver_name','$receiver_address','$receiver_phone','$product')");
+    $sql = $database->query("INSERT INTO customer_section(service_type,sender_name,sender_address,sender_phone,receiver_name,receiver_address,receiver_phone,product) VALUES('$service_type','$sender_name','$sender_address','$sender_phone','$receiver_name','$receiver_address','$receiver_phone','$product')");
     header("location:index.php");
 }
 ?>

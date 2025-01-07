@@ -76,7 +76,7 @@ echo "<div class='table-container'>
         <thead>
             <tr>
                 <th>Order ID</th>
-                <th>D Type</th>
+                <th>Service  Type</th>
                 <th>sender Name</th>
                  <th>Pickup Location</th>
                 <th>sender phone </th>
@@ -84,8 +84,6 @@ echo "<div class='table-container'>
                 <th>Delivery Location</th>
                 <th>receiver phone</th>
                 <th>Product</th>
-               
-                
                 <th>Status</th>
             </tr>
         </thead>";
@@ -99,7 +97,7 @@ while (list($id,$service_type, $sender_name, $sender_address, $sender_phone, $re
             <td>$sender_phone</td>
             <td>$receiver_name</td>
             <td>$receiver_address</td>
-            <td>$receiver_phone</td>
+             <td>$receiver_phone</td>
             <td> $product</td>
             <td><span class='status pending'>Pending</span></td>
         </tr>
