@@ -46,34 +46,22 @@ include_once "../connect/aside.php";
           <!-- First Row -->
           <div class="col-lg-6 col-12">
             <div class="small-box text-bg-primary"
-              style="width: 80%; height: 210px; margin: 0 auto; margin-bottom: 20px;">
+              style="width: 70%; height: 200px; margin: 0 auto; margin-bottom: 20px;">
               <div class="inner">
-                <h3>150</h3>
-                <p>Parsel Received</p>
+                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px;">150</h3>
+                <p style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black;">Parsel Received</p>
               </div>
-              <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c..."></path>
-              </svg>
-              <a href="#" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
-                More info <i class="bi bi-link-45deg"></i>
-              </a>
+
             </div>
           </div>
           <div class="col-lg-6 col-12">
             <div class="small-box text-bg-success"
-              style="width: 80%; height: 210px; margin: 0 auto; margin-bottom: 20px;">
+              style="width: 70%; height: 200px;  margin-bottom: 20px;">
               <div class="inner">
-                <h3>400</h3>
-                <p>Old Parsel</p>
+                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px;">400</h3>
+                <p style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black;">Old Parsel</p>
               </div>
-              <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c..."></path>
-              </svg>
-              <a href="#" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
-                More info <i class="bi bi-link-45deg"></i>
-              </a>
+
             </div>
           </div>
         </div>
@@ -82,34 +70,22 @@ include_once "../connect/aside.php";
         <div class="row">
           <div class="col-lg-6 col-12">
             <div class="small-box text-bg-warning"
-              style="width: 80%; height: 210px; margin: 0 auto; margin-bottom: 20px;">
+              style="width: 70%; height: 200px; margin: 0 auto; margin-bottom: 20px;">
               <div class="inner">
-                <h3>44</h3>
-                <p>Total Parsel</p>
+                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px; color:white;">44</h3>
+                <p style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black;color:white;">Total Parsel</p>
               </div>
-              <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path clip-rule="evenodd" fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 018.25-8.25..."></path>
-              </svg>
-              <a href="#" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
-                More info <i class="bi bi-link-45deg"></i>
-              </a>
+
             </div>
           </div>
           <div class="col-lg-6 col-12">
             <div class="small-box text-bg-danger"
-              style="width: 80%; height: 210px; margin: 0 auto; margin-bottom: 20px;">
+              style="width: 70%; height: 200px;  margin-bottom: 20px;">
               <div class="inner">
-                <h3>65</h3>
-                <p>Today Delivered</p>
+                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px;">65</h3>
+                <p style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black;">Pending Delivered</p>
               </div>
-              <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path clip-rule="evenodd" fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 018.25-8.25..."></path>
-              </svg>
-              <a href="#" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
-                More info <i class="bi bi-link-45deg"></i>
-              </a>
+
             </div>
           </div>
         </div>
@@ -211,7 +187,7 @@ include_once "../connect/aside.php";
       </div>
       <!-- Proved section -->
       <!-- browser section -->
-       
+
 
       <div id="browser-id" class="hidden">
         <?php
