@@ -110,32 +110,32 @@ document.getElementById('delivery-order-list-btn').addEventListener("click", fun
 
 })
 //status btn
-document.getElementById('delivery-status-btn').addEventListener("click", function (event) {
-    event.preventDefault()
-    document.getElementById('delivery-status-id').classList.remove('hidden');
-    document.getElementById('delivery-orderlist-id').classList.add('hidden');
-    document.getElementById('dashboard-section').classList.add('hidden');
-    document.getElementById('user-id').classList.add('hidden');
-    //document.getElementById('customer-id').classList.add('hidden');
-    document.getElementById('delivery-assing-id').classList.add('hidden');
-    document.getElementById('delivery-track-id').classList.add('hidden');
-    document.getElementById('driver-id').classList.add('hidden');
-    document.getElementById('payment-id').classList.add('hidden');
-    document.getElementById('support-id').classList.add('hidden');
-    document.getElementById('setting-id').classList.add('hidden');
-    document.getElementById('aurth-login-id').classList.add('hidden');
-    document.getElementById('aurth-registry-id').classList.add('hidden');
+// document.getElementById('delivery-status-btn').addEventListener("click", function (event) {
+//     // event.preventDefault()
+//     // document.getElementById('delivery-status-id').classList.remove('hidden');
+//     // document.getElementById('delivery-orderlist-id').classList.add('hidden');
+//     // document.getElementById('dashboard-section').classList.add('hidden');
+//     // document.getElementById('user-id').classList.add('hidden');
+//     // //document.getElementById('customer-id').classList.add('hidden');
+//     // document.getElementById('delivery-assing-id').classList.add('hidden');
+//     // document.getElementById('delivery-track-id').classList.add('hidden');
+//     // document.getElementById('driver-id').classList.add('hidden');
+//     // document.getElementById('payment-id').classList.add('hidden');
+//     // document.getElementById('support-id').classList.add('hidden');
+//     // document.getElementById('setting-id').classList.add('hidden');
+//     // document.getElementById('aurth-login-id').classList.add('hidden');
+//     // document.getElementById('aurth-registry-id').classList.add('hidden');
 
 
-    document.getElementById('browser-id').classList.add('hidden');
-    document.getElementById('faq-id').classList.add('hidden');
-    document.getElementById('licence-id').classList.add('hidden');
-    document.getElementById('branch-id').classList.add('hidden');
+//     // document.getElementById('browser-id').classList.add('hidden');
+//     // document.getElementById('faq-id').classList.add('hidden');
+//     document.getElementById('licence-id').classList.add('hidden');
+//     document.getElementById('branch-id').classList.add('hidden');
 
 
 
 
-})
+// })
 //asign btn
 
 document.getElementById('delivery-assing-btn').addEventListener("click", function (event) {
