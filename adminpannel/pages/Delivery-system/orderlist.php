@@ -1,37 +1,17 @@
 <?php
 $database = mysqli_connect("localhost", "root", "", "fasttrack");
+if(isset($_GET['deleteid'])){
+    $id=$_GET['deleteid'];
+    $sql=" DELETE FROM customer_section WHERE id=$id";
+    if (mysqli_query($database, $sql) == TRUE) {
+        header("location:index.php");
+    }
+
+}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order List</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .table-container {
-            max-width: 90%;
-            margin: 20px auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-        }
 
         thead {
             background-color: #007bff;
@@ -128,7 +108,7 @@ $database = mysqli_connect("localhost", "root", "", "fasttrack");
                         data-status='{$row['status']}'>
                         Update
                     </button>
-                </td>
+                     <a href='index.php?deleteid={$row['id']}'>Delete</a
             </tr>
         </tbody>";
     }
@@ -163,7 +143,7 @@ $database = mysqli_connect("localhost", "root", "", "fasttrack");
     </div>
 
     <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const exampleModal = document.getElementById('exampleModal');
