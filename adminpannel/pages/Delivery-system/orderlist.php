@@ -1,66 +1,66 @@
 <?php
 $database = mysqli_connect("localhost", "root", "", "fasttrack");
-if(isset($_GET['deleteid'])){
-    $id=$_GET['deleteid'];
-    $sql=" DELETE FROM customer_section WHERE id=$id";
+if (isset($_GET['deleteid'])) {
+    $id = $_GET['deleteid'];
+    $sql = " DELETE FROM customer_section WHERE id=$id";
     if (mysqli_query($database, $sql) == TRUE) {
         header("location:index.php");
     }
 
 }
 ?>
-    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <style>
+<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<style>
+    thead {
+        background-color: #007bff;
+        color: #fff;
+    }
 
-        thead {
-            background-color: #007bff;
-            color: #fff;
-        }
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid #ddd;
+    }
 
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-        }
+    th {
+        font-weight: bold;
+    }
 
-        th {
-            font-weight: bold;
-        }
+    tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
 
-        tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
+    tbody tr:hover {
+        background-color: #f1f1f1;
+    }
 
-        tbody tr:hover {
-            background-color: #f1f1f1;
-        }
+    .status {
+        font-weight: bold;
+        padding: 5px 5px;
+        border-radius: 4px;
+    }
 
-        .status {
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
+    .status.pending {
+        color: #856404;
+        background-color: #fff3cd;
+    }
 
-        .status.pending {
-            color: #856404;
-            background-color: #fff3cd;
-        }
+    .status.in_transit {
+        color: #0d6efd;
+        background-color: #cce5ff;
+    }
 
-        .status.in_transit {
-            color: #0d6efd;
-            background-color: #cce5ff;
-        }
+    .status.delivered {
+        color: #155724;
+        background-color: #d4edda;
+    }
 
-        .status.delivered {
-            color: #155724;
-            background-color: #d4edda;
-        }
-
-        .status.cancelled {
-            color: #721c24;
-            background-color: #f8d7da;
-        }
-    </style>
+    .status.cancelled {
+        color: #721c24;
+        background-color: #f8d7da;
+    }
+</style>
 </head>
 
 <body>
@@ -99,22 +99,23 @@ if(isset($_GET['deleteid'])){
                 <td>{$row['product']}</td>
                 <td><span class='status {$row['status']}'>{$row['status']}</span></td>
                 <td>
-                    <button 
+                    <button style='color:green; font-size:20px;' 
                         type='button' 
-                        class='btn btn-primary' 
+                         
                         data-bs-toggle='modal' 
                         data-bs-target='#exampleModal' 
                         data-id='{$row['id']}' 
                         data-status='{$row['status']}'>
                         Update
                     </button>
-                     <a href='index.php?deleteid={$row['id']}'>Delete</a
+                        <a href='index.php?deleteid={$row['id']}'style='color:red;  font-size:20px;' >Delete</a
+
+                    </td>
             </tr>
         </tbody>";
     }
     echo " </table> </div>";
     ?>
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -163,18 +164,18 @@ if(isset($_GET['deleteid'])){
     </script>
     <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $order_id = $_POST['order_id'];
-    $new_status = $_POST['delivery_status'];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $order_id = $_POST['order_id'];
+        $new_status = $_POST['delivery_status'];
 
-    $update_query = "UPDATE customer_section SET status = '$new_status' WHERE id = $order_id";
-    if ($database->query($update_query)) {
-        echo "Order status updated successfully!";
-    } else {
-        echo "Error updating status: " . $database->error;
+        $update_query = "UPDATE customer_section SET status = '$new_status' WHERE id = $order_id";
+        if ($database->query($update_query)) {
+            echo "Order status updated successfully!";
+        } else {
+            echo "Error updating status: " . $database->error;
+        }
     }
-}
-?>
+    ?>
 
 </body>
 

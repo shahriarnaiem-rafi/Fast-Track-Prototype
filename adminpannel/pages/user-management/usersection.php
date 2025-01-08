@@ -189,10 +189,12 @@ if (isset($_POST["submitted"])) {
                 <label for="senderAddress">Address</label>
 
                 <select name="senderAddress" id="senderAddress">
+                    
                     <?php
+                    echo "<option value=''>Select Address</option>";
                     $ns = $database->query("select * from branch");
                     while (list($id, $branch_name, $branch_code) = $ns->fetch_row()) {
-                        echo "<option value=''>Select Address</option>";
+                        
                         echo "<option value='$id'>$branch_name</option>";
                     }
                     ?>
@@ -211,9 +213,10 @@ if (isset($_POST["submitted"])) {
                 <label for="receiverAddress">Address</label>
                 <select name="receiverAddress" id="receiverAddress">
                 <?php
+                 echo "<option value=''>Select Address</option>";
                     $ns = $database->query("select * from branch");
                     while (list($id, $branch_name, $branch_code) = $ns->fetch_row()) {
-                        echo "<option value=''>Select Address</option>";
+                       
                         echo "<option value='$id'>$branch_name</option>";
                     }
                     ?>
