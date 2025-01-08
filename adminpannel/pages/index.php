@@ -120,12 +120,8 @@ include_once "../connect/aside.php";
         include_once "./Delivery-system/orderlist.php";
         ?>
       </div>
-      <!-- status -->
-      <div id="delivery-status-id" class="hidden">
-        <?php
-        include_once "./Delivery-system/status.php";
-        ?>
-      </div>
+     
+      
       <!-- assing -->
       <div id="delivery-assing-id" class="hidden">
         <?php

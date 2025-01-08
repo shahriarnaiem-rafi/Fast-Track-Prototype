@@ -78,13 +78,7 @@
                 <!-- Order list : Order List: A table with columns like order ID, customer name, pickup location, delivery location, status, etc.-->
               </a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" id="delivery-status-btn">
-                <i class="nav-icon bi bi-circle"></i>
-                <p>Status Updates</p>
-                <!-- Update delivery status (e.g., pending, in transit, delivered).-->
-              </a>
-            </li>
+            
             <li class="nav-item">
               <a href="#" class="nav-link" id="delivery-assing-btn">
                 <i class="nav-icon bi bi-circle"></i>
