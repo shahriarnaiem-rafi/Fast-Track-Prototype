@@ -9,7 +9,8 @@ if (isset($_POST["submitted"])) {
     $receiver_address = $_POST['receiverAddress'];
     $receiver_phone = $_POST['receiverPhone'];
     $product = $_POST['receiverProduct'];
-    $sql = $database->query("INSERT INTO customer_section(service_type,sender_name,sender_address,sender_phone,receiver_name,receiver_address,receiver_phone,product) VALUES('$service_type','$sender_name','$sender_address','$sender_phone','$receiver_name','$receiver_address','$receiver_phone','$product')");
+    $date = $_POST['date'];
+    $sql = $database->query("INSERT INTO customer_section(service_type,sender_name,sender_address,sender_phone,receiver_name,receiver_address,receiver_phone,product,date_of_order) VALUES('$service_type','$sender_name','$sender_address','$sender_phone','$receiver_name','$receiver_address','$receiver_phone','$product','$date')");
     header("location:index.php");
 }
 ?>
@@ -223,6 +224,11 @@ if (isset($_POST["submitted"])) {
 
                 <label for="receiverProduct">Product</label>
                 <input type="text" id="receiverProduct" name="receiverProduct" required>
+
+                
+                <label for="date">Date</label>
+                <input type="text" id="date" name="date" required>
+
 
                 <input type="submit" value="Submit" id="submitBtn" class="button" name="submitted">
             </form>

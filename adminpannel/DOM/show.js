@@ -167,7 +167,7 @@ document.getElementById('delivery-assing-btn').addEventListener("click", functio
 //track info
 
 document.getElementById('delivery-track-btn').addEventListener("click", function (event) {
-    event.preventDefault()
+    event.preventDefault();
 
     document.getElementById('delivery-track-id').classList.remove('hidden');
     document.getElementById('delivery-assing-id').classList.add('hidden');

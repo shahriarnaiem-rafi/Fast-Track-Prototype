@@ -1,7 +1,7 @@
 <?php
-$database = mysqli_connect("localhost", "root", "", "fasttrack");
+    $database = mysqli_connect("localhost", "root", "", "fasttrack");
 ?>
-<style>
+ <style>
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f9;
@@ -67,8 +67,31 @@ $database = mysqli_connect("localhost", "root", "", "fasttrack");
         color: #721c24;
         background-color: #f8d7da;
     }
-</style>
+</style> 
 <?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $ns = $database->query("select * from  customer_section");
 echo "<div class='table-container'> 
 <p>Order List</p>  
@@ -99,7 +122,8 @@ while (list($id,$service_type, $sender_name, $sender_address, $sender_phone, $re
             <td>$receiver_address</td>
              <td>$receiver_phone</td>
             <td> $product</td>
-            <td><span class='status pending'>Pending</span></td>
+            <td><span class='status pending'>Pending</span> </td>
+            <td><button><a href='index.php?status.php=$id'>Update<a></button> </td>
         </tr>
        
     </tbody>";
