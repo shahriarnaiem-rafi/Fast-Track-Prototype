@@ -10,6 +10,13 @@ if (isset($_POST["add-driver"])) {
         header("location: index.php");
     }
 }
+if (isset($_GET['deleteid'])) {
+    $id = $_GET['deleteid'];
+    $sql = "DELETE FROM driver_management WHERE id=$id";
+    if (mysqli_query($database, $sql) === TRUE) {
+        header("location:index.php");
+    }
+}
 ?>
 <style>
     body {
@@ -131,6 +138,7 @@ if (isset($_POST["add-driver"])) {
     </form>
     <?php
     $db = $database->query("select * from driver_management");
+    
     echo "<h3>Drivers List</h3>
     <table>
         <thead>
@@ -140,40 +148,21 @@ if (isset($_POST["add-driver"])) {
                 <th>Phone</th>
                 <th>Status</th>
                 <th>Completed Deliveries</th>
+                <th>Action</th>
             </tr>
         </thead>";
-    while (list($id, $dname, $dphone, $dstatus) = $db->fetch_row()) {
+    while ($row= $db->fetch_assoc()) {
         echo "<tbody>
             <tr>
-                <td>$id</td>
-                <td>$dname </td>
-                <td>$dphone</td>
-                <td><span class='status'>$dstatus</span></td>
+                <td>{$row['id']}</td>
+                <td>{$row['driver_name']} </td>
+                <td>{$row['driver_phone']}</td>
+                <td>{$row['available']}</td>
                 <td>120</td>
+                <td><a href='index.php?deleteid={$row['id']}' style='color:red; font-size:20px;'>Delete</a></td>
             </tr>
             </tbody>";
     }
     echo "</table>";
     ?>
-    <!-- <h3 style="text-align:center; margin-top:5px; " class="text-2xl bg-[lightblue]">Assign Task</h3>
-    <form action="" method="post">
-        <div class="form-group">
-            <label for="task-order-id">Order ID</label>
-            <input type="text" id="task-order-id" name="order_id" placeholder="Enter Order ID">
-        </div>
-        <div class="form-group">
-            <label for="assign-driver">Select Driver</label>
-            <select id="assign-driver" name="assign_driver">
-                <?php
-                $ns = $database->query("select * from driver_management");
-                while (list($id, $dname, $dphone) = $ns->fetch_row()) {
-                    echo "<option value='$id'>$dname</option>";
-                }
-                ?>
-            </select>
-        </div>
-        <div class="form-actions">
-            <button type="submit">Assign Task</button>
-        </div>
-    </form> -->
 </div>

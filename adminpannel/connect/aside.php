@@ -50,12 +50,6 @@
                 <p>Customer Section</p>
               </a>
             </li>
-            <!-- <li class="nav-item">
-              <a href="" class="nav-link" id="customer-btn">
-                <i class="nav-icon bi bi-circle"></i>
-                <p>Customer Section</p>
-              </a>
-            </li> -->
           </ul>
         </li>
 
@@ -252,7 +246,7 @@ Manage notification settings (email/SMS alerts for delivery updates). -->
         <li class="nav-item">
           <a href="../../rootfolder/logout.php" class="nav-link">
           <i class="fa-solid fa-right-to-bracket"></i>
-            <p>License</p>
+            <p>Log out</p>
           </a>
         </li>
 
