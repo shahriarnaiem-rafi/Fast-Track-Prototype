@@ -5,7 +5,7 @@
     <a href="./index.php" class="brand-link">
       <!--begin::Brand Image-->
       <img
-        src="../assets/img/shahriar.png"
+        src="../assets/img/adminimg.png"
         alt="AdminLTE Logo"
         class="brand-image opacity-75 shadow" />
       <!--end::Brand Image-->
