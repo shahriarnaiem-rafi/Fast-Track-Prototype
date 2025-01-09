@@ -132,10 +132,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search_order'])) {
                         <div class="mb-3">
                             <label for="delivery-status" class="form-label">Delivery Status</label>
                             <select class="form-select" id="delivery-status" name="delivery_status">
-                                <option value="pending">Pending</option>
-                                <option value="in_transit">In Transit</option>
-                                <option value="delivered">Delivered</option>
-                                <option value="cancelled">Cancelled</option>
+                                <option value="0">Pending</option>
+                                <option value="1">In Transit</option>
+                                <option value="2">Delivered</option>
+                                <option value="3">Cancelled</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary" >Update Status</button>

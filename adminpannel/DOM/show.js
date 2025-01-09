@@ -386,3 +386,8 @@ document.getElementById('licence-btn').addEventListener("click", function (event
     document.getElementById('faq-id').classList.add('hidden');
   });
 
+//   document.getElementById('submitBtn').addEventListener("click",function(){
+//     $submit_usersection= document.getElementById('parselrecived');
+//     $submit_usersection.value+1;
+
+//  })

@@ -224,7 +224,7 @@ if ($result->num_rows > 0) {
               <li class="user-footer">
                 <a href="https://www.linkedin.com/in/shahriar-naiem-ba26a7322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
                   class="btn btn-default btn-flat">Profile</a>
-                <a href="../../logout.php" class="btn btn-default btn-flat float-end">Sign out</a>
+                <a href="../../rootfolder/logout.php" class="btn btn-default btn-flat float-end">Sign out</a>
               </li>
               <!--end::Menu Footer-->
             </ul>

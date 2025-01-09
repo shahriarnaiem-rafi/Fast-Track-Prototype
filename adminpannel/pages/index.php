@@ -1,4 +1,7 @@
 <?php
+$database = mysqli_connect("localhost", "root", "", "fasttrack");
+?>
+<?php
 include_once "../headerfooter/header.php";
 ?>
 <!--begin::Sidebar-->
@@ -48,7 +51,14 @@ include_once "../connect/aside.php";
             <div class="small-box text-bg-primary"
               style="width: 70%; height: 200px; margin: 0 auto; margin-bottom: 20px;">
               <div class="inner">
-                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px;">150</h3>
+                <?php
+                $sql = "SELECT COUNT(*) AS total_rows FROM customer_section";
+                $query = $database->query($sql);
+                $row = $query->fetch_assoc(); // Fetch the result as an associative array
+                $length = $row['total_rows']; // Access the 'total_rows' value
+                ?>
+
+                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px;" id="parselrecived"><?php echo    $length; ?></h3>
                 <p style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black;">Parsel Received</p>
               </div>
 
@@ -72,7 +82,13 @@ include_once "../connect/aside.php";
             <div class="small-box text-bg-warning"
               style="width: 70%; height: 200px; margin: 0 auto; margin-bottom: 20px;">
               <div class="inner">
-                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px; color:white;">44</h3>
+                <?php
+                $sql = "SELECT COUNT(*) AS total_rows FROM customer_section";
+                $query = $database->query($sql);
+                $row = $query->fetch_assoc(); // Fetch the result as an associative array
+                $length = $row['total_rows']; // Access the 'total_rows' value
+                ?>
+                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px; color:white;"><?php echo    $length; ?></h3>
                 <p style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black;color:white;">Total Parsel</p>
               </div>
 
@@ -82,7 +98,13 @@ include_once "../connect/aside.php";
             <div class="small-box text-bg-danger"
               style="width: 70%; height: 200px;  margin-bottom: 20px;">
               <div class="inner">
-                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px;">65</h3>
+                <?php
+                $sql = "SELECT COUNT(*) AS total_rows FROM customer_section";
+                $query = $database->query($sql);
+                $row = $query->fetch_assoc(); // Fetch the result as an associative array
+                $length = $row['total_rows']; // Access the 'total_rows' value
+                ?>
+                <h3 style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black; margin-top:50px;"><?php echo    $length; ?></h3>
                 <p style="text-align: center;font-size: 30px;font-weight: bold;text-shadow: 2px 2px 2px black;">Pending Delivered</p>
               </div>
 
@@ -120,8 +142,8 @@ include_once "../connect/aside.php";
         include_once "./Delivery-system/orderlist.php";
         ?>
       </div>
-     
-      
+
+
       <!-- assing -->
       <div id="delivery-assing-id" class="hidden">
         <?php
