@@ -367,7 +367,6 @@ document.getElementById('licence-btn').addEventListener("click", function (event
 
   document.getElementById('branch-btn').addEventListener("click", function (event) {
     event.preventDefault();
-
     document.getElementById('branch-id').classList.remove('hidden');
     document.getElementById('licence-id').classList.add('hidden');
     document.getElementById('browser-id').classList.add('hidden');
@@ -385,9 +384,3 @@ document.getElementById('licence-btn').addEventListener("click", function (event
     // document.getElementById('customer-id').classList.add('hidden');
     document.getElementById('faq-id').classList.add('hidden');
   });
-
-//   document.getElementById('submitBtn').addEventListener("click",function(){
-//     $submit_usersection= document.getElementById('parselrecived');
-//     $submit_usersection.value+1;
-
-//  })

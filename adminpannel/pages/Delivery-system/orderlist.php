@@ -62,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search_order'])) {
         <input type="search" name="search_order" value="<?php echo htmlspecialchars($search_query); ?>" placeholder="Search by Order ID" class="p-2">
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
+    
     <?php 
     $query = "SELECT * FROM customer_section";
     if ($search_query !== "") {
@@ -132,10 +133,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search_order'])) {
                         <div class="mb-3">
                             <label for="delivery-status" class="form-label">Delivery Status</label>
                             <select class="form-select" id="delivery-status" name="delivery_status">
-                                <option value="0">Pending</option>
-                                <option value="1">In Transit</option>
-                                <option value="2">Delivered</option>
-                                <option value="3">Cancelled</option>
+                                <option value="Pending">Pending</option>
+                                <option value="In Transit">In Transit</option>
+                                <option value="Delivered">Delivered</option>
+                                <option value="Cancelled">Cancelled</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary" >Update Status</button>

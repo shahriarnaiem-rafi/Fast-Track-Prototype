@@ -36,10 +36,7 @@ include_once "../connect/aside.php";
   </div>
   <!--end::App Content Header-->
   <!--begin::App Content-->
-
-
   <div>
-
     <div class="app-content ">
       <!--begin::Container-->
 
@@ -173,11 +170,9 @@ include_once "../connect/aside.php";
       <!-- Branch -->
       <div id="branch-id" class="hidden">
         <?php
-        include_once "./branch/branch.php";
+          include_once "./branch/branch.php";
         ?>
       </div>
-
-
       <!-- suport -->
       <div id="support-id" class="hidden">
         <?php

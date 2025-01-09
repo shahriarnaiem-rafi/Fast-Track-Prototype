@@ -148,7 +148,7 @@ Display profit/loss analytics. -->
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link" id="branch-btn">
+              <a href="" class="nav-link" id="branch-btn">
                 <i class="fa-solid fa-code-branch"></i>
                 <p>Create Branch</p>
               </a>
