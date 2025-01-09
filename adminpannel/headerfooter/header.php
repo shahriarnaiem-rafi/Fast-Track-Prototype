@@ -203,8 +203,8 @@ if ($result->num_rows > 0) {
             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
               <!--begin::User Image-->
               <li class="user-header text-bg-primary">
-                <img src="../assets/img/shahriar.png" class="rounded-circle shadow" alt="User Image" />
-                <p>
+                <img src="../assets/img/shahriar.png" class="rounded-circle shadow " alt="User Image"  style="margin-left: 82px;"/>
+                <p style="font-size:25px">
                   <?=htmlspecialchars($user['name'])?>
                 </p>
               </li>
