@@ -1,5 +1,13 @@
 <?php 
 $database = mysqli_connect("localhost", "root", "", "fasttrack");
+    if(isset($_POST['asing'])){
+        $driver_id=$_POST['customer_id1'];
+        $vehicle=$_POST['vehicle'];
+        $order_id=$_POST['driver'];
+         $sql = $database->query("INSERT INTO assing_drivers(driver_id,vehicle,order_id) VALUES('$driver_id','$vehicle','$order_id')");
+        header("location:index.php");
+
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,14 +15,9 @@ $database = mysqli_connect("localhost", "root", "", "fasttrack");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assign Drivers</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-        }
+       
 
         .assign-container {
             max-width: 500px;
@@ -183,6 +186,6 @@ $database = mysqli_connect("localhost", "root", "", "fasttrack");
         });
     });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

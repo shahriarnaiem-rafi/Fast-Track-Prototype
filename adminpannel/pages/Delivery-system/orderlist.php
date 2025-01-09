@@ -59,8 +59,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search_order'])) {
 
 <body>
     <form action="" method="post">
-        <input type="search" name="search_order" value="<?php echo htmlspecialchars($search_query); ?>" placeholder="Search by Order ID">
-        <button type="submit">Search</button>
+        <input type="search" name="search_order" value="<?php echo htmlspecialchars($search_query); ?>" placeholder="Search by Order ID" class="p-2">
+        <button type="submit" class="btn btn-primary">Search</button>
     </form>
     <?php 
     $query = "SELECT * FROM customer_section";
