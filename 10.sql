@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2025 at 04:36 PM
+-- Generation Time: Jan 07, 2025 at 07:13 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,27 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `fasttrack`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `assing_drivers`
---
-
-CREATE TABLE `assing_drivers` (
-  `id` int(100) NOT NULL,
-  `driver_id` int(100) NOT NULL,
-  `vehicle` varchar(100) NOT NULL,
-  `order_id` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `assing_drivers`
---
-
-INSERT INTO `assing_drivers` (`id`, `driver_id`, `vehicle`, `order_id`) VALUES
-(7, 15, 'Truck 101', '45'),
-(8, 22, 'Truck 101', '44');
 
 -- --------------------------------------------------------
 
@@ -77,18 +56,17 @@ CREATE TABLE `customer_section` (
   `receiver_name` varchar(100) NOT NULL,
   `receiver_address` varchar(100) NOT NULL,
   `receiver_phone` varchar(100) NOT NULL,
-  `product` varchar(100) NOT NULL,
-  `date_of_order` varchar(100) NOT NULL,
-  `status` varchar(100) NOT NULL
+  `product` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `customer_section`
 --
 
-INSERT INTO `customer_section` (`id`, `service_type`, `sender_name`, `sender_address`, `sender_phone`, `receiver_name`, `receiver_address`, `receiver_phone`, `product`, `date_of_order`, `status`) VALUES
-(44, 'Express', 'Shahriar', '1', '01301232', 'qwe', '2', 'weqweqwe', 'we', '12-12-2025', ''),
-(45, 'Standard', 'r', '1', 'werw', '3242', '1', '342', '234', '12-12-2025', '');
+INSERT INTO `customer_section` (`id`, `service_type`, `sender_name`, `sender_address`, `sender_phone`, `receiver_name`, `receiver_address`, `receiver_phone`, `product`) VALUES
+(6, 'Standard', 'Rafi', '23marpur', '37982437', 'Alo Akther', 'Noyakhali', '3873823', 'parcel'),
+(35, 'Standard', 'fsd', 'Cumilla', 'sdf', 'rajib', 'Noakhali', '4er5', 'wer'),
+(36, 'Express', 'fds', '', 'dsf', 'sdaf', '2', 'dsadf', 'sdf');
 
 -- --------------------------------------------------------
 
@@ -108,6 +86,9 @@ CREATE TABLE `driver_management` (
 --
 
 INSERT INTO `driver_management` (`id`, `driver_name`, `driver_phone`, `available`) VALUES
+(15, 'MUNNA', '02324234', 'available'),
+(21, 'MUNNA', '02324234', 'unavailable'),
+(22, 'naim', 'bokachoda', 'unavailable'),
 (23, 'MUNNA', '02324234', 'available');
 
 -- --------------------------------------------------------
@@ -161,12 +142,6 @@ INSERT INTO `registration` (`id`, `name`, `email`, `mobail`, `password`, `gendar
 --
 
 --
--- Indexes for table `assing_drivers`
---
-ALTER TABLE `assing_drivers`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `branch`
 --
 ALTER TABLE `branch`
@@ -201,12 +176,6 @@ ALTER TABLE `registration`
 --
 
 --
--- AUTO_INCREMENT for table `assing_drivers`
---
-ALTER TABLE `assing_drivers`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
 -- AUTO_INCREMENT for table `branch`
 --
 ALTER TABLE `branch`
@@ -216,7 +185,7 @@ ALTER TABLE `branch`
 -- AUTO_INCREMENT for table `customer_section`
 --
 ALTER TABLE `customer_section`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `driver_management`
