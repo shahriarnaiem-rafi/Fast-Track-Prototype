@@ -10,7 +10,9 @@ if (isset($_POST["submitted"])) {
     $receiver_phone = $_POST['receiverPhone'];
     $product = $_POST['receiverProduct'];
     $date = $_POST['date'];
-    $sql = $database->query("INSERT INTO customer_section(service_type,sender_name,sender_address,sender_phone,receiver_name,receiver_address,receiver_phone,product,date_of_order) VALUES('$service_type','$sender_name','$sender_address','$sender_phone','$receiver_name','$receiver_address','$receiver_phone','$product','$date')");
+    $status = 'pending';
+   
+    $sql = $database->query("INSERT INTO customer_section(service_type,sender_name,sender_address,sender_phone,receiver_name,receiver_address,receiver_phone,product,date_of_order, status) VALUES('$service_type','$sender_name','$sender_address','$sender_phone','$receiver_name','$receiver_address','$receiver_phone','$product','$date', '$status')");
     header("location:index.php");
 }
 ?>

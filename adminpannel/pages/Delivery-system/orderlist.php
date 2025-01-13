@@ -38,10 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search_order'])) {
         padding: 5px 5px;
         border-radius: 4px;
     }
-    .status.pending {
-        color: #856404;
-        background-color: #fff3cd;
-    }
     .status.in_transit {
         color: #0d6efd;
         background-color: #cce5ff;
@@ -133,7 +129,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search_order'])) {
                         <div class="mb-3">
                             <label for="delivery-status" class="form-label">Delivery Status</label>
                             <select class="form-select" id="delivery-status" name="delivery_status">
-                                <option value="Pending">Pending</option>
                                 <option value="In Transit">In Transit</option>
                                 <option value="Delivered">Delivered</option>
                                 <option value="Cancelled">Cancelled</option>
