@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2025 at 07:13 AM
+-- Generation Time: Jan 13, 2025 at 05:37 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -24,6 +24,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `assing_drivers`
+--
+
+CREATE TABLE `assing_drivers` (
+  `id` int(100) NOT NULL,
+  `driver_id` int(100) NOT NULL,
+  `vehicle` varchar(100) NOT NULL,
+  `order_id` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `assing_drivers`
+--
+
+INSERT INTO `assing_drivers` (`id`, `driver_id`, `vehicle`, `order_id`) VALUES
+(7, 15, 'Truck 101', '45'),
+(8, 22, 'Truck 101', '44'),
+(9, 46, 'Bike 303', '23'),
+(11, 48, 'Truck 101', '23'),
+(12, 49, 'Bike 303', '23'),
+(13, 44, 'Truck 101', '23');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `branch`
 --
 
@@ -39,7 +64,8 @@ CREATE TABLE `branch` (
 
 INSERT INTO `branch` (`branch_id`, `branch_name`, `branch_code`) VALUES
 (1, 'Cadpur', '3434'),
-(2, 'Noakhli', '32423');
+(2, 'Noakhli', '32423'),
+(3, 'mogobari', '.03644');
 
 -- --------------------------------------------------------
 
@@ -56,17 +82,22 @@ CREATE TABLE `customer_section` (
   `receiver_name` varchar(100) NOT NULL,
   `receiver_address` varchar(100) NOT NULL,
   `receiver_phone` varchar(100) NOT NULL,
-  `product` varchar(100) NOT NULL
+  `product` varchar(100) NOT NULL,
+  `date_of_order` varchar(100) NOT NULL,
+  `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `customer_section`
 --
 
-INSERT INTO `customer_section` (`id`, `service_type`, `sender_name`, `sender_address`, `sender_phone`, `receiver_name`, `receiver_address`, `receiver_phone`, `product`) VALUES
-(6, 'Standard', 'Rafi', '23marpur', '37982437', 'Alo Akther', 'Noyakhali', '3873823', 'parcel'),
-(35, 'Standard', 'fsd', 'Cumilla', 'sdf', 'rajib', 'Noakhali', '4er5', 'wer'),
-(36, 'Express', 'fds', '', 'dsf', 'sdaf', '2', 'dsadf', 'sdf');
+INSERT INTO `customer_section` (`id`, `service_type`, `sender_name`, `sender_address`, `sender_phone`, `receiver_name`, `receiver_address`, `receiver_phone`, `product`, `date_of_order`, `status`) VALUES
+(44, 'Express', 'Shahriar', '1', '01301232', 'qwe', '2', 'weqweqwe', 'we', '12-12-2025', 'in_transit'),
+(45, 'Standard', 'r', '1', 'werw', '3242', '1', '342', '234', '12-12-2025', 'pending'),
+(46, 'Standard', 'Rafi', '1', '37982437', 'rajib', '2', '3873823', '3453', '12-10-2025', 'in_transit'),
+(47, 'Express', 'rajib', '1', '5345435', 'rokeya', '2', '3873823', 'pack', '12-10-2025', 'delivered'),
+(48, 'Express', 'rahat', '1', '37982437', 'imam', '1', 'ewrt', 'parcel', '12-10-2025', 'In Transit'),
+(49, 'Express', 'hasibul', '1', '37982437', 'rafi', '2', '4564', 'packet', '12-10-2025', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -86,10 +117,19 @@ CREATE TABLE `driver_management` (
 --
 
 INSERT INTO `driver_management` (`id`, `driver_name`, `driver_phone`, `available`) VALUES
-(15, 'MUNNA', '02324234', 'available'),
-(21, 'MUNNA', '02324234', 'unavailable'),
-(22, 'naim', 'bokachoda', 'unavailable'),
-(23, 'MUNNA', '02324234', 'available');
+(25, 'hasibul', '02324234', 'unavailable');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parcel_recived_location`
+--
+
+CREATE TABLE `parcel_recived_location` (
+  `id` int(100) NOT NULL,
+  `order_id` int(100) NOT NULL,
+  `receiver_location` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -142,6 +182,12 @@ INSERT INTO `registration` (`id`, `name`, `email`, `mobail`, `password`, `gendar
 --
 
 --
+-- Indexes for table `assing_drivers`
+--
+ALTER TABLE `assing_drivers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `branch`
 --
 ALTER TABLE `branch`
@@ -157,6 +203,12 @@ ALTER TABLE `customer_section`
 -- Indexes for table `driver_management`
 --
 ALTER TABLE `driver_management`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `parcel_recived_location`
+--
+ALTER TABLE `parcel_recived_location`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -176,22 +228,34 @@ ALTER TABLE `registration`
 --
 
 --
+-- AUTO_INCREMENT for table `assing_drivers`
+--
+ALTER TABLE `assing_drivers`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
 -- AUTO_INCREMENT for table `branch`
 --
 ALTER TABLE `branch`
-  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `customer_section`
 --
 ALTER TABLE `customer_section`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `driver_management`
 --
 ALTER TABLE `driver_management`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `parcel_recived_location`
+--
+ALTER TABLE `parcel_recived_location`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `register_staf`
