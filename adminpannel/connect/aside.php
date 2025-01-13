@@ -87,6 +87,13 @@
                 <!--  Update or view tracking numbers for shipments.-->
               </a>
             </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" id="delivery-track-btn">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>Parcel Recived</p>
+                
+              </a>
+            </li>
           </ul>
         </li>
         <!-- ENd this section -->
@@ -148,7 +155,7 @@ Display profit/loss analytics. -->
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link" id="branch-btn">
+              <a href="" class="nav-link" id="branch_btn">
                 <i class="fa-solid fa-code-branch"></i>
                 <p>Create Branch</p>
               </a>
